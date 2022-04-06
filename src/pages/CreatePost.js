@@ -6,7 +6,7 @@ import { userAuthState } from '../context'
 
 const CreatePost = () => {
   const { userState } = useContext(userAuthState)
-  const [isAuth, setIsAuth] = userState
+  const [isAuth] = userState
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
@@ -26,6 +26,7 @@ const CreatePost = () => {
     if (!isAuth) {
       navigate('/login')
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <>
