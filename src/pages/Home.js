@@ -5,7 +5,7 @@ import { userAuthState } from '../context'
 
 const Home = () => {
   const { userState } = useContext(userAuthState)
-  const [isAuth, setIsAuth] = userState
+  const [isAuth] = userState
 
   const [postList, setPostList] = useState([])
   const postCollectionRef = collection(db, 'posts')
